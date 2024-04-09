@@ -80,8 +80,8 @@ numberInput.addEventListener("submit", (e) => {
 });
 
 spinBtn.addEventListener("click", () => {
-  if (min === 0 || max === 0) {
-    alert("من فضلك قم بإدخال الحد الاعلى ");
+  if (min === 0 || max === 0 || max < min) {
+    alert("من فضلك قم بإدخال قيم سليمة للحد الأعلى والحد الأدنى ");
   } else if (slots[0].classList.contains("visible")) {
     drumRoll.play();
     lucky.textContent = "...الفائز هو";
